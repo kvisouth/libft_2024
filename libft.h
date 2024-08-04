@@ -6,7 +6,7 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:19:08 by kevisout          #+#    #+#             */
-/*   Updated: 2024/07/25 21:43:26 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/04 22:20:11 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ void    ft_putnbr_fd(int n, int fd);
 char    *ft_itoa(int n);
 int     ft_atoi(const char *str);
 char	**ft_split(char const *s, char c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strdup(const char *s);
 
 /* LISTS */
 
