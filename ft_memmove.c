@@ -6,12 +6,11 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 22:01:45 by kevisout          #+#    #+#             */
-/*   Updated: 2024/07/24 23:15:45 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:27:57 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 /*
 ft_memmove c'est le frere de ft_memcpy, sauf que lui, gere les zones memoires

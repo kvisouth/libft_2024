@@ -6,14 +6,11 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 16:00:35 by kevisout          #+#    #+#             */
-/*   Updated: 2024/07/21 18:20:50 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:27:01 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdint.h>
 
 /*
 ft_calloc alloue (nmemb * size) octets avec malloc().

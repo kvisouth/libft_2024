@@ -6,12 +6,11 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 11:02:23 by kevisout          #+#    #+#             */
-/*   Updated: 2024/07/24 11:11:35 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:27:46 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 /*
 ft_memcmp compare les n premiers octets (interpretees par des unsigned char)

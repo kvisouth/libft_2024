@@ -6,12 +6,11 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 21:43:03 by kevisout          #+#    #+#             */
-/*   Updated: 2024/07/24 22:05:32 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:27:52 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 /*
 ft_memcpy va copier les 'n' premiers octets de la zone 'src' dans la zone 'dest'

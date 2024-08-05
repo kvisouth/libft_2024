@@ -6,12 +6,11 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 23:35:03 by kevisout          #+#    #+#             */
-/*   Updated: 2024/07/24 23:42:18 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:28:02 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 /*
 ft_memset remplie les 'n' premiers octets dans la zone memoire pointee par 's'

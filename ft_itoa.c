@@ -6,9 +6,11 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 18:55:01 by kevisout          #+#    #+#             */
-/*   Updated: 2024/07/21 23:16:31 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:27:26 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Cette fonction nous sers a connaitre la taille a malloc pour notre nombre.

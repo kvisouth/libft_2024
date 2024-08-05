@@ -6,12 +6,11 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 19:00:22 by kevisout          #+#    #+#             */
-/*   Updated: 2024/07/23 21:17:51 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:27:39 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 /*
 ft_memchr scan les 'n' premiers octets pointee par 's'
