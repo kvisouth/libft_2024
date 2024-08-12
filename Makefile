@@ -6,7 +6,7 @@
 #    By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/12 12:20:18 by kevisout          #+#    #+#              #
-#    Updated: 2024/08/12 13:59:30 by kevisout         ###   ########.fr        #
+#    Updated: 2024/08/12 14:05:13 by kevisout         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,8 @@ bonus:		$(OBJ_BONUS)
 all:		$(NAME)
 
 # clean supprimera tout les fichier .o, bonus compris mais pas libft.a
-clean:		$(RM) $(OBJ_MAND) $(OBJ_BONUS)
+clean:
+			$(RM) $(OBJ_MAND) $(OBJ_BONUS)
 
 # fclean (fullclean) supprimera tout les .o, bonus compris mais aussi libft.a
 fclean:		clean
