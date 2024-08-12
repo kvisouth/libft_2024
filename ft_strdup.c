@@ -6,7 +6,7 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 22:12:07 by kevisout          #+#    #+#             */
-/*   Updated: 2024/08/04 22:18:36 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:11:17 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ Dans un autre const char qu'on doit egalement malloc
 */
 char	*ft_strdup(const char *s)
 {
-	int			i;
-	const char	ret;
+	int		i;
+	char	*ret;
 
 	i = 0;
 	while (s[i])

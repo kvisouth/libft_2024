@@ -6,7 +6,7 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 11:44:52 by kevisout          #+#    #+#             */
-/*   Updated: 2024/07/21 17:59:56 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:03:25 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ La string doit etre sous cette forme :
 Le parsing s'arrete d'est qu'une de ses regles n'est pas respectee.
 */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	pos;
 	int	nbr;

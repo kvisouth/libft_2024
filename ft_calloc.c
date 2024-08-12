@@ -6,7 +6,7 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 16:00:35 by kevisout          #+#    #+#             */
-/*   Updated: 2024/08/05 12:27:01 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:02:21 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ret;
 	size_t	i;
 
-	if (size != 0 && nmemb > SIZEMAX / size)
+	if (size != 0 && nmemb > SIZE_MAX / size)
 		return (NULL);
 	ret = malloc(nmemb * size);
 	if (!ret)

@@ -6,7 +6,7 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 18:55:01 by kevisout          #+#    #+#             */
-/*   Updated: 2024/08/05 12:27:26 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:05:53 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	get_nbr_len(int nb)
 {
 	int	len;
 
+	len = 0;
 	if (nb < 0)
 	{
 		len++;
