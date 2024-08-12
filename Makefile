@@ -6,12 +6,12 @@
 #    By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/12 12:20:18 by kevisout          #+#    #+#              #
-#    Updated: 2024/08/12 14:05:13 by kevisout         ###   ########.fr        #
+#    Updated: 2024/08/12 16:35:15 by kevisout         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Les fonctions de la partie obligatoire
-SRC_MAND	= ft_isalnum.c ft_calloc.c ft_atoi.c ft_memchr.c ft_putstr_fd.c ft_putchar_fd.c ft_split.c ft_itoa.c ft_isalpha.c ft_memset.c ft_memcmp.c ft_strjoin.c ft_memcpy.c ft_substr.c ft_strlcpy.c ft_isprint.c ft_strdup.c ft_strmapi.c ft_tolower.c ft_strtrim.c ft_toupper.c ft_memmove.c ft_isascii.c ft_strlcat.c ft_striteri.c ft_putendl_fd.c ft_strlen.c ft_bzero.c ft_putnbr_fd.c ft_strchr.c ft_isdigit.c ft_strnstr.c ft_strncmp.c
+SRC_MAND	= ft_isalnum.c ft_calloc.c ft_atoi.c ft_memchr.c ft_putstr_fd.c ft_putchar_fd.c ft_split.c ft_itoa.c ft_isalpha.c ft_memset.c ft_memcmp.c ft_strjoin.c ft_memcpy.c ft_substr.c ft_strlcpy.c ft_isprint.c ft_strdup.c ft_strmapi.c ft_tolower.c ft_strtrim.c ft_toupper.c ft_memmove.c ft_isascii.c ft_strlcat.c ft_striteri.c ft_putendl_fd.c ft_strlen.c ft_bzero.c ft_putnbr_fd.c ft_strchr.c ft_isdigit.c ft_strnstr.c ft_strncmp.c ft_strrchr.c
 
 # Les fonctions de la partie bonus
 SRC_BONUS	= 

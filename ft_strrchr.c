@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/04 16:46:18 by kevisout          #+#    #+#             */
-/*   Updated: 2024/08/12 16:23:24 by kevisout         ###   ########.fr       */
+/*   Created: 2024/08/12 16:02:33 by kevisout          #+#    #+#             */
+/*   Updated: 2024/08/12 16:35:26 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-ft_strchr retourne un pointeur sur la premiere occurence de 'c' dans 's'
-retourne NULL si 'c' n'est pas trouvee dans 's'.
-Cas specifique : si c = '\0', un pointeur vers le caractere NULL de 's'
-sera retournee (la fin donc)
+ft_strrchr, agit comme ft_strchr, mais au lieu de retourner un pointeur vers
+la PREMIERE occurence, il retourne un pointeur vers la DERNIERE occcurence
+Sinon c'est exactement la meme fonction
 */
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
+	const char	*s_cpy;
+
 	if (c == '\0')
 		return ((char *)s);
+	s_cpy = s;
 	while (*s)
+		s++;
+	while (*s != *s_cpy)
 	{
 		if ((char)*s == (char)c)
 			return ((char *)s);
-		s++;
+		s--;
 	}
 	return (NULL);
 }
