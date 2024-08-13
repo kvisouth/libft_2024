@@ -50,8 +50,7 @@ fclean:		clean
 			$(RM) $(NAME)
 
 # re executera fclean, puis all. En gros il efface tout, et REcompile tout.
-re:			fclean
-			$(NAME)
+re:			fclean all
 
 # .PHONY sers a eviter les conflits entre noms de fichier et noms de regles.
 # Si j'ai un fichier qui s'apelle clean, c'est chiant par exemple, .PHONY s'en occupe
