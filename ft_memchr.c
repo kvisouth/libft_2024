@@ -15,7 +15,8 @@
 /*
 ft_memchr scan les 'n' premiers octets pointee par 's'
 Il cherche la premiere occurence du caractere 'c' dans cette zone scannee.
-C'est comme strchr mais en memoire (d'ou memchr)
+Retourne un pointeur sur cet occurence si trouvee ou NULL s'il n'est pas trv.
+'c' et 's' sont interpretees par des unsigned char.
 */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -26,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	str = (char *)s;
 	while (i < n)
 	{
-		if (str[i] == c)
+		if (str[i] == (unsigned char)c)
 			return ((void *)&str[i]);
 		i++;
 	}

@@ -20,13 +20,13 @@ sera retournee (la fin donc)
 */
 char	*ft_strchr(const char *s, int c)
 {
-	if (c == '\0')
-		return ((char *)s);
 	while (*s)
 	{
 		if ((char)*s == (char)c)
 			return ((char *)s);
 		s++;
 	}
+	if (c == '\0')
+		return ((char *)s);
 	return (NULL);
 }
