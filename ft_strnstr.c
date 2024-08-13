@@ -19,14 +19,14 @@ jusqu'a len.
 On cast les valeurs de retours car ft_strnstr retourne un *char et on manipule
 des const char*
 Renvoie NULL si il ne trouve rien.
-Renvoie big si little est vide.	
+Renvoie big si little est vide.	(On differencie chaine vide et chaine NULL !)
 */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
-	if (!little)
+	if (!*little || !little)
 		return ((char *)big);
 	i = 0;
 	while (big[i] && i < len)

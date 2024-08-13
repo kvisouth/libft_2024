@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /*
-ft_strncmp compare chaque lettres de s1 et s2 entre elles.
+ft_strncmp compare chaque lettres de s1 et s2 entre elles jusqu'a n.
 Retourne la difference de ces 2 lettres si elles ne sont pas identiques.
 Sinon retourne 0.
 */
@@ -22,7 +22,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] == s2[i]) && i < n)
+	while (i < n)
+	{
+		if (s1[i] != s2[i])
+			return ((char)s1[i] - (char)s2[i]);
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	return (0);
 }
