@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /*
-ft_substr allour avec malloc et retourne une chaine de caractere issue de 's'
+ft_substr alloue avec malloc et retourne une chaine de caractere issue de 's'
 Cette chaine de caractere commence a l'index 'start' et aura pour taille 'len'
 Ne retourne NULL que si l'allocation echoue
 
@@ -23,19 +23,22 @@ affecte la longueur de 's'.
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
-	char			*ret;
+	char			*str;
 
 	i = 0;
 	while (s[i])
 		i++;
 	if (start >= i)
 		start = i;
-	ret = malloc((len + 1) * sizeof(char));
-	if (!ret)
+	i = 0;
+	while (i < len && s[i])
+		i++;
+	str = malloc((i + 1) * sizeof(char));
+	if (!str)
 		return (NULL);
 	i = 0;
-	while (i < (unsigned int)len)
-		ret[i++] = s[start++];
-	ret[i] = '\0';
-	return (ret);
+	while (i < len && s[start])
+		str[i++] = s[start++];
+	str[i] = '\0';
+	return (str);
 }
