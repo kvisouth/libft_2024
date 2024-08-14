@@ -17,18 +17,18 @@ Cette fonction nous sers a connaitre la taille a malloc pour notre nombre.
 Renvoie 5 si nb = -4234
 Renvoie 3 si nb = 102
 */
-int	get_nbr_len(int nb)
+int	get_nbr_len(long nb)
 {
 	int	len;
 
 	len = 0;
+	if (nb == 0)
+		return (1);
 	if (nb < 0)
 	{
 		len++;
 		nb *= -1;
 	}
-	else if (nb == 0)
-		return (1);
 	while (nb > 0)
 	{
 		len++;
@@ -63,7 +63,7 @@ char	*ft_itoa(int n)
 		return (NULL);
 	str[i--] = '\0';
 	if (nbr == 0)
-		return (str[0] = '0', str);
+		str[0] = '0';
 	if (nbr < 0)
 	{
 		str[0] = '-';

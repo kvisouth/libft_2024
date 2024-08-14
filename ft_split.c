@@ -40,7 +40,7 @@ char	*dup_str(char const *s, char sep)
 	char	*str;
 
 	i = 0;
-	while (s[i] != sep)
+	while (s[i] != sep && s[i])
 		i++;
 	str = malloc(i + 1);
 	if (!str)
