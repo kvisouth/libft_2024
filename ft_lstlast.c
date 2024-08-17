@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/17 19:12:30 by kevisout          #+#    #+#             */
-/*   Updated: 2024/08/17 19:22:44 by kevisout         ###   ########.fr       */
+/*   Created: 2024/08/17 19:23:44 by kevisout          #+#    #+#             */
+/*   Updated: 2024/08/17 19:30:53 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-ft_lstdelone libere la supprime le contenu de 'content' et free() cet element
+ft_lstlast retourne un pointeur vers le dernier maillon de la liste.
+Simplement, tant que lst->next n'est pas NULL, on avance dans la liste
 */
-
-void	ft_lstdelone(t_list *lst, void(*del)(void*))
+t_list	*ft_lstlast(t_list *lst)
 {
-	(*del)(lst->content);
-	free(lst);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
