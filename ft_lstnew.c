@@ -6,7 +6,7 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 14:54:38 by kevisout          #+#    #+#             */
-/*   Updated: 2024/08/17 15:07:08 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/17 23:22:23 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ t_list	*ft_lstnew(void *content)
 	if (!elem)
 		return (NULL);
 	elem->content = content;
-	elen->next = NULL;
+	elem->next = NULL;
 	return (elem);
 }

@@ -6,7 +6,7 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 18:57:28 by kevisout          #+#    #+#             */
-/*   Updated: 2024/08/17 19:12:17 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/17 23:45:07 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 
+	if (!lst)
+		return ;
 	while (*lst)
 	{
-		tmp = *lst->next;
-		(*del)(lst->content);
+		tmp = (*lst)->next;
+		(*del)((*lst)->content);
 		free(*lst);
 		*lst = tmp;
 	}
