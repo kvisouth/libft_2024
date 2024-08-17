@@ -6,7 +6,7 @@
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 15:21:28 by kevisout          #+#    #+#             */
-/*   Updated: 2024/08/17 15:36:18 by kevisout         ###   ########.fr       */
+/*   Updated: 2024/08/17 18:41:47 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ element de la liste) est maintenant egal a new. (Le nouveau maillon)
 */
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	tmp;
+	t_list	*tmp;
 
 	if (!*lst)
 	{
