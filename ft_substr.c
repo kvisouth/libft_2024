@@ -17,8 +17,11 @@ ft_substr alloue avec malloc et retourne une chaine de caractere issue de 's'
 Cette chaine de caractere commence a l'index 'start' et aura pour taille 'len'
 Ne retourne NULL que si l'allocation echoue
 
-Si start est un nombre plus grand que la longueur de 's', alors on lui
-affecte la longueur de 's'.
+Si start est un nombre plus grand que la longueur de 's', alors on retourne une
+chaine vide.
+Si la valeur de 'len' est plus grande que la taille de 's', alors on ajuste len
+en lui mettant la longeur de 's' moins 'start', ce qui fait que len est egal
+au nombre de caracteres restants a partir de start, jusqu'a la fin de la chaine.
 */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -29,7 +32,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	while (s[i])
 		i++;
 	if (start >= i)
-		start = i;
+		return (ft_strdup(""));
+	if (len > i - start)
+		len = i - start;
 	i = 0;
 	while (i < len && s[i])
 		i++;
