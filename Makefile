@@ -16,8 +16,11 @@ AR		= ar rcs
 OBJ_MAND	= $(SRC_MAND:.c=.o)
 OBJ_BONUS	= $(SRC_BONUS:.c=.o)
 
+# Regle pour compiler les fichiers .c en .o avec gcc -Wall -Wextra -Werror
+# -c est une option pour compiler sans lier
+# -o specifie le nom de sortie (le fichier .o correspondant ducoup)
 %.o: %.c
-			$(CC) $(CFLAGS) -c $< -o $@
+			$(CC) $(CFLAGS) -c %.c -o %.o
 
 # $(NAME) ne pourra pas etre executee si $(OBJ_MAND) n'existe pas.
 # libft.a est une archive (avec ar rcs) de tout les fichiers .o
