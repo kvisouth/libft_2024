@@ -21,20 +21,16 @@ Sinon c'est exactement la meme fonction
 */
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*s_cpy;
+	const char	*last_occur;
 
-	s_cpy = s;
+	last_occur = NULL;
 	while (*s)
-		s++;
-	if (c == '\0')
-		return ((char *)s);
-	while (*s != *s_cpy)
 	{
-		if ((char)*s == (char)c)
-			return ((char *)s);
-		s--;
+		if ((unsigned char)*s == (unsigned char)c)
+			last_occur = s;
+		s++;
 	}
-	if ((char)*s == (char)c)
+	if ((unsigned char)c == '\0')
 		return ((char *)s);
-	return (NULL);
+	return ((char *)last_occur);
 }
