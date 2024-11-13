@@ -12,11 +12,6 @@
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
-
 /*
 ft_putnbr_fd ecris l'entier n sur la sortie fd.
 La recursivite ca prend + de RAM que de l'iteratif, et vu que je veux une

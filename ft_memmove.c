@@ -31,30 +31,35 @@ Sinon, dans la condition ELSE, c'est le cas ou ils ne chevauchent pas,
 et donc on peut reprendre le raisonnement de ft_memcpy.
 Donc une copie de gauche a droite.
 */
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t		i;
-	char		*destination;
-	const char	*source;
+	size_t	i;
 
-	i = 0;
-	destination = (char *)dest;
-	source = (const char *)src;
-	if (destination > source)
+	if (!dest && !src)
+		return (NULL);
+	if ((char *)dest > (const char *)src)
 	{
 		while (n > 0)
 		{
-			destination[n - 1] = source[n - 1];
+			((char *)dest)[n - 1] = ((const char *)src)[n - 1];
 			n--;
 		}
 	}
 	else
 	{
+		i = 0;
 		while (i < n)
 		{
-			destination[i] = source[i];
+			((char *)dest)[i] = ((const char *)src)[i];
 			i++;
 		}
 	}
 	return (dest);
 }
+
+/*
+Au debut j'avais des variables qui etaient des cast de dest et src
+pour que ce soit plus lisible mais a cause de la norme j'ai enlever ca
+et c'est illisible
+*/
