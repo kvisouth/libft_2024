@@ -5,70 +5,81 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevisout <kevisout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 11:03:46 by kevisout          #+#    #+#             */
-/*   Updated: 2024/08/07 11:08:40 by kevisout         ###   ########.fr       */
+/*   Created: 2024/11/13 18:57:27 by kevisout          #+#    #+#             */
+/*   Updated: 2024/11/13 18:58:24 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Retourne 1 si la lettre 'c' est presente dans 'set' */
-int	is_trim(char c, char const *set)
+/*
+**	*s1 = "+-++yo+les-mec--+-"
+**	*set= "+-"
+**	ft_strtrim(s1, set) = yo+les-mec
+**	enfait il enleve les char de *set a gauche et a droite seulement.
+*/
+
+static int	is_trim(const char letter, const char *set)
 {
 	int	i;
 
 	i = 0;
 	while (set[i])
 	{
-		if (c == set[i])
+		if (letter == set[i])
 			return (1);
 		i++;
 	}
 	return (0);
 }
 
-int	get_trimmed_len(char const *s, char const *set)
+/*
+**	Etape 1 : il ignore les caracteres a trimmer a gauche avec i
+**	Etape 2 : parel a droite avec j, jusqu'a croiser i.
+**	Ducoup on sait quon malloc i-j + 1 pour le \0
+**	Etape 3 : On copie la chaine de i a j dans notre nouvelle string.
+*/
+
+char	*ft_strtrim(const char *s, const char *set)
 {
-	int	i;
-	int	len;
+	char	*str;
+	int		la_taille;
+	int		i;
+	int		j;
+	int		n;
 
 	i = 0;
-	len = 0;
-	while (s[i])
-	{
-		while (is_trim(s[i], set) && s[i])
-			i++;
-		while (!is_trim(s[i], set) && s[i])
-		{
-			i++;
-			len++;
-		}
-		while (is_trim(s[i], set) && s[i])
-			i++;
-	}
-	return (len);
+	j = ft_strlen(s) - 1;
+	while (is_trim(s[i], set) == 1 && s[i])
+		i++;
+	while (is_trim(s[j], set) == 1 && j > i)
+		j--;
+	la_taille = (j - i) + 1;
+	str = malloc(la_taille * sizeof(char) + 1);
+	if (!str)
+		return (NULL);
+	n = 0;
+	while (i <= j)
+		str[n++] = s[i++];
+	str[n] = '\0';
+	return (str);
 }
 
 /*
-ft_strtrim alloue avec malloc et retourne une chaine de caractere.
-Cette chaine de caractere, est 's1', mais sans les caracteres de 'set'
-au debut et a la fin.
-*/
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	int		i;
-	int		y;
-	char	*ret;
+int	main (int ac, char **av)
+ {
+ 	if (ac == 3)
+ 	{
+ 	char *s1 = av[1];
+ 	char *set = av[2];
+ 	printf("Voici le trimage: %s",ft_strtrim(s1, set));
+ 	}
+ }
 
-	i = 0;
-	while (is_trim(s1[i], set) && s1[i])
-		i++;
-	ret = malloc((get_trimmed_len(s1, set) + 1) * sizeof(char));
-	if (!ret)
-		return (NULL);
-	y = 0;
-	while (!is_trim(s1[i], set) && s1[i])
-		ret[y++] = s1[i++];
-	ret[y] = '\0';
-	return (ret);
-}
+ int	main (void)
+ {
+ 	char *s1 = "++yo+mec++";
+ 	char *set = "+";
+ 	printf("Voici le trimage: %s",ft_strtrim(s1, set));
+ }
+*/
