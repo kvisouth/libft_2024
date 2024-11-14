@@ -12,6 +12,19 @@
 
 #include "libft.h"
 
+/* En cas d'echec de la part de malloc, cette fonction sera appelee */
+void	free_all(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+}
+
 /* Retourne le nombre de mots dont split a besoin pour malloc */
 int	count_words(char const *s, char sep)
 {
@@ -76,7 +89,7 @@ char	**ft_split(char const *s, char c)
 		{
 			tab[i] = dup_str(s, c);
 			if (!tab)
-				return (NULL);
+				return (free_all(tab), NULL);
 			i++;
 		}
 		while (*s != c && *s)
