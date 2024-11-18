@@ -52,7 +52,7 @@ char	*ft_strtrim(const char *s, const char *set)
 	while (is_trim(s[j], set) == 1 && j > i)
 		j--;
 	size = (j - i) + 1;
-	str = malloc(la_taille * sizeof(char) + 1);
+	str = malloc(size * sizeof(char) + 1);
 	if (!str)
 		return (NULL);
 	n = 0;
