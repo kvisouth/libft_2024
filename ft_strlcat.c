@@ -47,3 +47,37 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (dest_len + src_len);
 }
+
+/*
+#include <bsd/string.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main(int ac, char **av)
+{
+	char	*src1;
+	char	*src2;
+	char	*dest1;
+	char	*dest2;
+	size_t	size;
+
+	if (ac != 3)
+	{
+		src1 = strdup(av[1]);
+		src2 = strdup(av[1]);
+		size = atoi(av[2]);
+		dest1 = strdup(av[2]);
+		dest2 = strdup(av[2]);
+
+		printf("Valeur strlcat : %ld\n", strlcat(dest1, src1, size));
+		printf("Valeur ft_strlcat : %ld\n", ft_strlcat(dest2, src2, size));
+		printf("Valeur de dest avec strlcat : %s\n", dest1);
+		printf("Valeur de dest avec ft_strlcat : %s", dest2);
+
+		free(dest1);
+		free(dest2);
+		free(src1);
+		free(src2);
+	}
+}
+*/
