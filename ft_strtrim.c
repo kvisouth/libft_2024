@@ -13,10 +13,7 @@
 #include "libft.h"
 
 /*
-**	*s1 = "+-++yo+les-mec--+-"
-**	*set= "+-"
-**	ft_strtrim(s1, set) = yo+les-mec
-**	enfait il enleve les char de *set a gauche et a droite seulement.
+is_trim retourne 1 si la lettre en parametre est une lettre du *set
 */
 
 static int	is_trim(const char letter, const char *set)
@@ -34,16 +31,16 @@ static int	is_trim(const char letter, const char *set)
 }
 
 /*
-**	Etape 1 : il ignore les caracteres a trimmer a gauche avec i
-**	Etape 2 : parel a droite avec j, jusqu'a croiser i.
-**	Ducoup on sait quon malloc i-j + 1 pour le \0
-**	Etape 3 : On copie la chaine de i a j dans notre nouvelle string.
+	Etape 1 : il ignore les caracteres a trimmer a gauche avec i
+	Etape 2 : parel a droite avec j, jusqu'a croiser i.
+	Ducoup on sait quon malloc i-j + 1 pour le \0
+	Etape 3 : On copie la chaine de i a j dans notre nouvelle string.
 */
 
 char	*ft_strtrim(const char *s, const char *set)
 {
 	char	*str;
-	int		la_taille;
+	int		size;
 	int		i;
 	int		j;
 	int		n;
@@ -54,7 +51,7 @@ char	*ft_strtrim(const char *s, const char *set)
 		i++;
 	while (is_trim(s[j], set) == 1 && j > i)
 		j--;
-	la_taille = (j - i) + 1;
+	size = (j - i) + 1;
 	str = malloc(la_taille * sizeof(char) + 1);
 	if (!str)
 		return (NULL);
